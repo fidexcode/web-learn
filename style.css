@@ -1,0 +1,85 @@
+body{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    font-family: sans-serif;
+}
+.container{
+    position: relative;
+    width: 500px;
+}
+.containerProfile{
+    width: 250px;
+    height: 300px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    padding: 15px;
+    background: linear-gradient(to right, indigo, hotpink);
+    color: whitesmoke;
+    position: relative;
+    z-index: 2;
+}
+#profileImage{
+    width: 60px;
+    padding: 1px;
+}
+#profileImage img{
+    border: 1px solid #000066;
+    border-radius: 50%;
+}
+#profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+button{
+    background-color: #000066;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.remainder{
+    width: 250px;
+    height: 300px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    color: hotpink;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    animation: reminder;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+@keyframes reminder{
+    from {left: 0;}
+    to {left: 281px;}
+}
+.handwave{
+    width: 60px;
+}
+@media  (max-width: 468px) {
+    .remainder{
+        animation: unset;
+    }
+    .container{
+        width: unset;
+    }
+}
