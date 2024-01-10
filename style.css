@@ -8,11 +8,14 @@ body{
     background-color: #fff;
     font-family: sans-serif;
 }
+.wrap{
+    display: grid;
+}
 .container{
     position: relative;
     width: 500px;
 }
-.containerProfile{
+#containerProfile{
     width: 250px;
     height: 300px;
     border-radius: 8px;
@@ -67,6 +70,37 @@ button{
     animation-duration: 4s;
     animation-delay: 2s;
     animation-fill-mode: forwards;
+}
+/* styling form*/
+.form{
+    border: 2px solid gray;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+    position: absolute;
+    place-self: center;
+    z-index: 3;
+    display: none;
+}
+.showform{
+    display: block;
+}
+.input{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+input{
+    border: none;
+    border-bottom: 1px solid gray;
+    outline: none;
+}
+textarea{
+    outline: none;
+}
+#msg{
+    color: red;
 }
 @keyframes reminder{
     from {left: 0;}

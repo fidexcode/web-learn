@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>web learn</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="wrap">
     <div class="container">
-        <div class="containerProfile">
+        <div id="containerProfile">
             <div id="profile">
                 <div id="profileImage">
                     <img src="image/profile.jpg" alt="profile" width="100%">
@@ -23,10 +23,10 @@
                         obcaecati eligendi, animi sit voluptates ipsum porro.
                     </p>
                 </div>
-                <button>Edit profile</button>
+                <button onclick="editProfile()">Edit profile</button>
             </div>
         </div>
-        <!--second div-->
+        <!--second div -->
         <div class="remainder">
             <div class="handwave">
                 <img src="./image/handwave.png" alt="handwave" width="100%">
@@ -41,5 +41,23 @@
             <button>Learn more</button>
         </div>
     </div>
+
+    <div class="form">
+        <form id="form">
+            <div class="input">
+                <label for="">Name:</label>
+                <br>
+                <input type="text" name="fullName" id="input">
+                <br>
+                <label for="Bio">Bio:</label>
+                <textarea name="" id="Bio" cols="" rows="5"></textarea>
+            </div>
+            <br>
+            <p id="msg"></p>
+            <button type="submit" id="remove">Save</button>
+        </form>
+    </div>
+    </div>
+    <script src="main.js"></script>
 </body>
 </html>
